@@ -1,0 +1,39 @@
+name: 🪵 Auto Update File Tree in README
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-file-tree:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Generate Tree File
+        run: |
+          tree -I '.git|.github|__pycache__|*.o|*.exe' -L 3 > tree.txt
+
+      - name: Replace Tree Section in README
+        run: |
+          START="<!-- BEGIN_FILE_TREE -->"
+          END="<!-- END_FILE_TREE -->"
+          TREE=$(cat tree.txt | sed 's/`/\\`/g')
+          awk -v start="$START" -v end="$END" -v tree="$TREE" '
+            BEGIN {print start}
+            $0 == start {flag=1; next}
+            $0 == end {flag=0; print tree; print end; next}
+            !flag {print}
+          ' README.md > README.new.md
+          mv README.new.md README.md
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add README.md
+          git commit -m "📦 Auto-update file tree" || echo "No changes to commit"
+          git push
