@@ -1,0 +1,8 @@
+NAME:  obaid   ID:  123   GPA:  1.1
+
+NAME:  dadws   ID:  0   GPA:  7.86752e-24
+
+NAME:     ID:  -2141056400   GPA:  7.86227e-24
+
+NAME:     ID:  128   GPA:  0
+
