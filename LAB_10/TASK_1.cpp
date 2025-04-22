@@ -42,8 +42,6 @@ int main(){
         outputFile<<"\n\n";
         outputFile.flush();
         cout<<"DATA STORED IN FILE"<<endl;
-        
-
     }
     // outputFile.open("Example.txt",ios::app);
     // if(!outputFile){
@@ -72,8 +70,6 @@ int main(){
      file.close();
     }
     else cout<<"Unable to open file"<<endl;
-
-
     return 0;
 
 }
