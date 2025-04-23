@@ -29,10 +29,10 @@ int main(){
         return 1;
     }
     for(int i=0;i<3;i++){
+        cout<<"Enter Details for Student    "<<i+1<<endl;
         cout<<"Enter Your Name:     ";cin>>S[i].name;
         cout<<"Enter Your ID:     ";cin>>S[i].id;
         cout<<"Enter Your GPA:     ";cin>>S[i].gpa;
-        // S[i](id,name,gpa);
         if(!outputFile){
             cout<<"Error opening File"<<endl;
             return 1;}
@@ -41,7 +41,7 @@ int main(){
         outputFile<<"   GPA:  "<<S[i].gpa;
         outputFile<<"\n\n";
         outputFile.flush();
-        cout<<"DATA STORED IN FILE"<<endl;
+        cout<<"DATA STORED IN FILE FOR Student "<<i+1<<endl;
     }
     // outputFile.open("Example.txt",ios::app);
     // if(!outputFile){
@@ -59,10 +59,10 @@ int main(){
     outputFile<<"\n\n";
     outputFile.flush();
     outputFile.close();
-    cout<<"DATA STORED IN FILE"<<endl;
+    cout<<"DATA STORED IN FILE For Appended Student"<<endl;
     string line;
     ifstream file;
-    file.open("student.txt");
+    file.open("Example.txt");
     if(file.is_open()){
     while (getline(file,line)){
           cout <<line<<endl;

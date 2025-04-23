@@ -1,8 +1,9 @@
-NAME:  obaid   ID:  123   GPA:  1.1
 
-NAME:  dadws   ID:  0   GPA:  7.86752e-24
+NAME:  OBAID   ID:  1   GPA:  1
 
-NAME:     ID:  -2141056400   GPA:  7.86227e-24
+NAME:  Ali   ID:  2   GPA:  2
 
-NAME:     ID:  128   GPA:  0
+NAME:  Ahmed   ID:  3   GPA:  3
+
+NAME:  Yousha   ID:  4   GPA:  4
 
