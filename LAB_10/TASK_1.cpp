@@ -22,17 +22,17 @@ struct Student{
     Student(){}
     Student(int i,string n,float gp):id(i),name(n),gpa(gp){}};
 int main(){
-    Student S[3];
-    ofstream outputFile("Example.txt",ios::out|ios::app);
+    Student S[5];
+    ofstream outputFile("Example.txt",ios::out);//Creating||Opening File
     if(!outputFile){
         cout<<"Error opening File"<<endl;
         return 1;
     }
-    for(int i=0;i<3;i++){
+    for(int i=0;i<5;i++){
         cout<<"Enter Details for Student    "<<i+1<<endl;
-        cout<<"Enter Your Name:     ";cin>>S[i].name;
-        cout<<"Enter Your ID:     ";cin>>S[i].id;
-        cout<<"Enter Your GPA:     ";cin>>S[i].gpa;
+        cout<<"Enter Name:     ";cin>>S[i].name;
+        cout<<"Enter ID:     ";cin>>S[i].id;
+        cout<<"Enter GPA:     ";cin>>S[i].gpa;
         if(!outputFile){
             cout<<"Error opening File"<<endl;
             return 1;}
@@ -42,27 +42,27 @@ int main(){
         outputFile<<"\n\n";
         outputFile.flush();
         cout<<"DATA STORED IN FILE FOR Student "<<i+1<<endl;
+        cout<<"\n\n";
     }
-    // outputFile.open("Example.txt",ios::app);
-    // if(!outputFile){
-    //     cout<<"Error opening File"<<endl;
-    //     return 1;
-    // }
+    outputFile.close();//Closing File
+    
+    outputFile.open("Example.txt",ios::app);//Append mode
     Student S1;
-    cout<<"Enter Student Details To append"<<endl;
-    cout<<"Enter Your Name:     ";cin>>S1.name;
-    cout<<"Enter Your ID:     ";cin>>S1.id;
-    cout<<"Enter Your GPA:     ";cin>>S1.gpa;
+    cout<<"Enter New Student Details"<<endl;
+    cout<<"Enter Name:     ";cin>>S1.name;
+    cout<<"Enter ID:     ";cin>>S1.id;
+    cout<<"Enter GPA:     ";cin>>S1.gpa;
     outputFile<<"NAME:  "<<S1.name;
     outputFile<<"   ID:  "<<S1.id;
     outputFile<<"   GPA:  "<<S1.gpa;
     outputFile<<"\n\n";
     outputFile.flush();
-    outputFile.close();
-    cout<<"DATA STORED IN FILE For Appended Student"<<endl;
+    outputFile.close();//Closing Fil
+    cout<<"New Student DATA STORED IN FILE"<<endl;
+    cout<<"\n\n";
     string line;
     ifstream file;
-    file.open("Example.txt");
+    file.open("Example.txt");//Opening To Read
     if(file.is_open()){
     while (getline(file,line)){
           cout <<line<<endl;
