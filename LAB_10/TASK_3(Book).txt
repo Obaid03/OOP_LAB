@@ -1,0 +1,6 @@
+CHAPTER NAME:    Introduction to C++
+CHAPTER Content:    This chapter covers the basics of C++ programming.
+
+CHAPTER NAME:    Object-Oriented Programming
+CHAPTER Content:    This chapter explains classes, objects, inheritance, and polymorphism.
+
