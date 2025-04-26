@@ -23,7 +23,7 @@ struct Student{
     Student(int i,string n,float gp):id(i),name(n),gpa(gp){}};
 int main(){
     Student S[5];
-    ofstream outputFile("Example.txt",ios::out);//Creating||Opening File
+    ofstream outputFile("TASK_1.txt",ios::out);//Creating||Opening File
     if(!outputFile){
         cout<<"Error opening File"<<endl;
         return 1;
@@ -46,7 +46,7 @@ int main(){
     }
     outputFile.close();//Closing File
     
-    outputFile.open("Example.txt",ios::app);//Append mode
+    outputFile.open("TASK_1.txt",ios::app);//Append mode
     Student S1;
     cout<<"Enter New Student Details"<<endl;
     cout<<"Enter Name:     ";cin>>S1.name;
@@ -62,7 +62,7 @@ int main(){
     cout<<"\n\n";
     string line;
     ifstream file;
-    file.open("Example.txt");//Opening To Read
+    file.open("TASK_1.txt");//Opening To Read
     if(file.is_open()){
     while (getline(file,line)){
           cout <<line<<endl;

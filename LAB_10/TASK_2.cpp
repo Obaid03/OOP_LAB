@@ -16,7 +16,7 @@ int main(){
     cout<<"Enter Years Of Experience:     ";cin>>r1.experience;
     cout<<"Enter Summary:     ";cin>>r1.summary;
     
-    ofstream file("Trunc.txt",ios::out);//Opening File
+    ofstream file("TASK_2.txt",ios::out);//Opening File
     if(!file.is_open()){
         cout<<"Error opening File"<<endl;
         return 1;}
@@ -38,7 +38,7 @@ int main(){
     cout<<"Enter Years Of Experience:     ";cin>>r2.experience;
     cout<<"Enter Summary:     ";cin>>r2.summary;
     
-    file.open("Trunc.txt",ios::trunc);//Opening File in Trunc Mode
+    file.open("TASK_2.txt",ios::trunc);//Opening File in Trunc Mode
     if(!file.is_open()){
         cout<<"Error opening File"<<endl;
         return 1;}
@@ -54,7 +54,7 @@ int main(){
 
     string line;
     ifstream File;
-    File.open("Trunc.txt");//Opening To Read
+    File.open("TASK_2.txt");//Opening To Read
     if(File.is_open()){
     while(getline(File,line)){
           cout <<line<<endl;

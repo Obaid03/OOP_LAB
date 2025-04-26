@@ -1,0 +1,12 @@
+NAME:  obaid   ID:  11   GPA:  1.1
+
+NAME:  OBAID   ID:  12   GPA:  1.2
+
+NAME:  Obaidu   ID:  13   GPA:  1.3
+
+NAME:  OBAIDU   ID:  14   GPA:  1.4
+
+NAME:  ObaidUllah   ID:  14   GPA:  1.4
+
+NAME:  Has   ID:  34   GPA:  3.4
+
